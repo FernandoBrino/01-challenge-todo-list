@@ -1,0 +1,38 @@
+.createTodo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+    position: absolute;
+    top: 10.8125rem;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.625rem;
+    height: 3.25rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--blue-dark);
+    color: var(--gray-100);
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    width: 39.875rem;
+    height: 3.375rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--gray-500);
+    color: var(--gray-300);
+    padding-left: 1rem;
+}
