@@ -1,3 +1,4 @@
+import { Todo } from './Todo';
 import styles from './TodoList.module.css';
 
 export function TodoList() {
@@ -6,15 +7,15 @@ export function TodoList() {
             <div className={styles.statusTodos}>
                 <p className={styles.createdTodos}>
                     Tarefas Criadas
-                    <span>0</span>
+                    <span>5</span>
                 </p>
                 <p className={styles.doneTodos}>
                     Concluida
-                    <span>0</span>
+                    <span>2 de 5</span>
                 </p>
             </div>
             <div className={styles.allTodos}>
-                <p>Lista aqui</p>
+                <Todo />
             </div>
         </main>
     );

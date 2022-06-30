@@ -26,12 +26,13 @@ main {
     align-items: center;
     justify-content: center;
     height: 1.18rem;
-    width: 1.56rem;
+    max-width: 4rem;
     background-color: var(--gray-400);
     border-radius: 8px;
     font-weight: 700;
     font-size: 0.75rem;
     color: var(--gray-200);
+    padding: 0.125rem 0.5rem;
 }
 
 .createdTodos {
@@ -40,4 +41,8 @@ main {
 
 .doneTodos {
     color: var(--purple);
+}
+
+.allTodos {
+    width: 46rem;
 }
