@@ -5,15 +5,48 @@
     padding: 1rem 1.2rem;
     background-color: var(--gray-500);
     border-radius: 8px;
+    margin-bottom: 0.75rem;
 }
 
-.todoBox input {
-    height: 1rem;
-    width: 1rem;
-    margin-right: 0.9rem;
+.todoBox svg {
+    color: var(--gray-300);
+    font-size: 1.1rem;
 }
 
 .todoBox p {
     width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
+
+.todoBox .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.9rem;
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.todoBox .activeCheckbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.9rem;
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    background-color: var(--purple-dark);
+    cursor: pointer;
+}
+
+.todoBox .activeCheckbox svg {
+    color: var(--gray-100);
+    font-size: 0.7rem;
+}
+
 

@@ -27,6 +27,11 @@ button:hover {
     cursor: pointer;
 }
 
+
+.createTodo button svg {
+    font-size: 1rem;
+}
+
 input {
     width: 39.875rem;
     height: 3.375rem;

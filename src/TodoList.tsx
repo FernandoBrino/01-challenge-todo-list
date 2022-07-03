@@ -16,6 +16,10 @@ export function TodoList() {
             </div>
             <div className={styles.allTodos}>
                 <Todo />
+                <Todo />
+                <Todo />
+                <Todo />
+                <Todo />
             </div>
         </main>
     );

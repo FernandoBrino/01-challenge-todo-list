@@ -11,12 +11,13 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
 }
 
 .statusTodos p {
     display: flex;
     gap: 0.5rem;
-    font-weight: 700;
     font-size: 0.875rem;
     align-items: center;
 }
