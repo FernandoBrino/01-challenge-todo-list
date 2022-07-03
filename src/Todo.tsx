@@ -3,23 +3,34 @@ import { TbTrash } from 'react-icons/tb';
 import { MdDone } from 'react-icons/md';
 import styles from './Todo.module.css';
 
-export function Todo() {
-    const [checkboxIsActive, setCheckboxIsActive] = useState<boolean>(false);
+interface TodoProps {
+    todoContent: string;
+    onDeleteTodo: (todoContent: string) => void;
+}
+
+export function Todo({todoContent, onDeleteTodo}: TodoProps) {
+    const [todoIsDone, setTodoIsDone] = useState<boolean>(false);
 
     function handleActiveCheckbox() {
-        setCheckboxIsActive(!checkboxIsActive);
+        setTodoIsDone(!todoIsDone);
+    }
+
+    function handleDeleteTodo() {
+        onDeleteTodo(todoContent);
     }
     
     return(
         <div className={styles.todoBox}>
             <div 
-                className={checkboxIsActive ? styles.activeCheckbox : styles.checkbox} 
+                className={todoIsDone ? styles.activeCheckbox : styles.checkbox} 
                 onClick={handleActiveCheckbox}
             >
-                {checkboxIsActive && <MdDone />}
+                {todoIsDone && <MdDone />}
             </div>
-            <p>Terminar de desenvolver aplicação de todos do Ignite.</p>
-            <TbTrash/>
+            <p>{todoContent}</p>
+            <button onClick={handleDeleteTodo}>     
+                <TbTrash/>  
+            </button>
         </div>
     );
 }
