@@ -1,15 +1,17 @@
 import './global.css';
-import styles from './App.module.css';
 import { Header } from './Header';
 import { CreateTodoButton } from './CreateTodo'
 import { TodoList } from './TodoList';
+import { useState } from 'react';
 
 function App() {
+  const [todos, setTodos] = useState<string[]>([]);
+
   return (
     <>
       <Header/>
-      <CreateTodoButton/>
-      <TodoList/>
+      <CreateTodoButton setTodos={setTodos} todos={todos}/>
+      <TodoList todos={todos} setTodos={setTodos}/>
     </>   
   );
 }
