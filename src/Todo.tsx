@@ -6,30 +6,35 @@ import styles from './Todo.module.css';
 interface TodoProps {
     todoContent: string;
     onDeleteTodo: (todoContent: string) => void;
+    onMarkTodoAsDone: (todoIsDone: boolean) => void;
 }
 
-export function Todo({todoContent, onDeleteTodo}: TodoProps) {
+export function Todo({todoContent, onDeleteTodo, onMarkTodoAsDone}: TodoProps) {
     const [todoIsDone, setTodoIsDone] = useState<boolean>(false);
 
-    function handleActiveCheckbox() {
+    function handleTodoIsDone() {
         setTodoIsDone(!todoIsDone);
+        onMarkTodoAsDone(!todoIsDone);
     }
 
     function handleDeleteTodo() {
+        if(todoIsDone) {
+            onMarkTodoAsDone(false)
+        }
         onDeleteTodo(todoContent);
     }
     
     return(
         <div className={styles.todoBox}>
-            <div 
+            <div
                 className={todoIsDone ? styles.activeCheckbox : styles.checkbox} 
-                onClick={handleActiveCheckbox}
+                onClick={handleTodoIsDone}
             >
                 {todoIsDone && <MdDone />}
             </div>
-            <p>{todoContent}</p>
-            <button onClick={handleDeleteTodo}>     
-                <TbTrash/>  
+            {todoIsDone ? <s>{todoContent}</s> : <p>{todoContent}</p>}
+            <button onClick={handleDeleteTodo}>
+                <TbTrash/>
             </button>
         </div>
     );

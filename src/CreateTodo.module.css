@@ -21,6 +21,11 @@
     gap: 0.5rem;
     font-weight: 700;
     font-size: 0.875rem;
+    transition: background-color 0.5s;
+}
+
+.createTodo button:hover {
+    background-color: var(--blue);
 }
 
 button:hover {

@@ -6,6 +6,10 @@ main {
     margin-top: 5rem;
 }
 
+.todosList {
+    width: 46rem;
+}
+
 .statusTodos {
     width: 46rem;
     display: flex;
@@ -44,6 +48,26 @@ main {
     color: var(--purple);
 }
 
-.allTodos {
+.noTodosCreated {
+    min-height: 15rem;
+    display: flex;
+    flex-direction: column;
     width: 46rem;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 5px 5px 0 0;
+    color: var(--gray-300);
+    font-family: 'Inter', sans-serif;
 }
+
+.noTodosCreated > img {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.noTodosCreated b{
+    margin-bottom: 0.2rem;
+}
+
